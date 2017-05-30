@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+source/CMakeFiles/test.dir/rule:
+	cd /home/t/Dropbox/Soft1/programmiersprachen-aufgabenblatt-4.1/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/test.dir/rule
+.PHONY : source/CMakeFiles/test.dir/rule
+
+# Convenience name for target.
+test: source/CMakeFiles/test.dir/rule
+
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	cd /home/t/Dropbox/Soft1/programmiersprachen-aufgabenblatt-4.1/build && $(MAKE) -f source/CMakeFiles/test.dir/build.make source/CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+# Convenience name for target.
 source/CMakeFiles/aufgabe1.dir/rule:
 	cd /home/t/Dropbox/Soft1/programmiersprachen-aufgabenblatt-4.1/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe1.dir/rule
 .PHONY : source/CMakeFiles/aufgabe1.dir/rule
@@ -124,6 +139,33 @@ aufgabe1: source/CMakeFiles/aufgabe1.dir/rule
 aufgabe1/fast:
 	cd /home/t/Dropbox/Soft1/programmiersprachen-aufgabenblatt-4.1/build && $(MAKE) -f source/CMakeFiles/aufgabe1.dir/build.make source/CMakeFiles/aufgabe1.dir/build
 .PHONY : aufgabe1/fast
+
+TestList.o: TestList.cpp.o
+
+.PHONY : TestList.o
+
+# target to build an object file
+TestList.cpp.o:
+	cd /home/t/Dropbox/Soft1/programmiersprachen-aufgabenblatt-4.1/build && $(MAKE) -f source/CMakeFiles/test.dir/build.make source/CMakeFiles/test.dir/TestList.cpp.o
+.PHONY : TestList.cpp.o
+
+TestList.i: TestList.cpp.i
+
+.PHONY : TestList.i
+
+# target to preprocess a source file
+TestList.cpp.i:
+	cd /home/t/Dropbox/Soft1/programmiersprachen-aufgabenblatt-4.1/build && $(MAKE) -f source/CMakeFiles/test.dir/build.make source/CMakeFiles/test.dir/TestList.cpp.i
+.PHONY : TestList.cpp.i
+
+TestList.s: TestList.cpp.s
+
+.PHONY : TestList.s
+
+# target to generate assembly for a file
+TestList.cpp.s:
+	cd /home/t/Dropbox/Soft1/programmiersprachen-aufgabenblatt-4.1/build && $(MAKE) -f source/CMakeFiles/test.dir/build.make source/CMakeFiles/test.dir/TestList.cpp.s
+.PHONY : TestList.cpp.s
 
 aufgabe1.o: aufgabe1.cpp.o
 
@@ -159,8 +201,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... edit_cache"
 	@echo "... aufgabe1"
+	@echo "... TestList.o"
+	@echo "... TestList.i"
+	@echo "... TestList.s"
 	@echo "... aufgabe1.o"
 	@echo "... aufgabe1.i"
 	@echo "... aufgabe1.s"
